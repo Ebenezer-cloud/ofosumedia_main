@@ -1,0 +1,129 @@
+:root {
+  --primary-red: #dc2626;
+  --secondary-gold: #f59e0b;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --bg-topbar: #6848b4;
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding-bottom: 70px; /* Space for fixed audio player */
+}
+
+/* Top Utility Nav */
+.top-nav {
+  background-color: var(--bg-topbar);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.top-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  color: var(--secondary-gold);
+}
+
+/* Main Navigation */
+.main-navbar {
+  background-color: var(--bg-topbar) !important;
+  border-bottom: 3px solid var(--primary-red);
+}
+
+.main-navbar .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 0.9rem !important;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link.active {
+  color: var(--secondary-gold) !important;
+}
+
+/* Cards & Components */
+.card-custom {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-red);
+}
+
+.section-title {
+  position: relative;
+  font-weight: 700;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-red);
+}
+
+/* Slider Overlays */
+.carousel-item {
+  height: 480px;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption-custom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 30%, rgba(15,23,42,0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #7f1d1d 0%, #1e1b4b 100%);
+  border: 1px solid var(--primary-red);
+  border-radius: 12px;
+}
+
+/* Footer & Audio Player */
+footer {
+  background-color: var(--bg-topbar);
+  border-top: 1px solid var(--border-color);
+}
+
+.sticky-audio-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: #020617;
+  border-top: 3px solid var(--primary-red);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+}
